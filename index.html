@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#310b1b">
 <title>DESTINY '26 | Feedback Portal</title>
+
 <style>
 :root {
   --wine:#310b1b;
@@ -14,8 +15,10 @@
   --white:#f7f4f6;
   --line:rgba(197,199,204,.3);
 }
-*{box-sizing:border-box}
-body{
+
+* { box-sizing:border-box; }
+
+body {
   margin:0;
   min-height:100vh;
   color:var(--white);
@@ -25,8 +28,14 @@ body{
     linear-gradient(145deg,#16050d,#310b1b 55%,#10040a);
   background-attachment:fixed;
 }
-.wrap{width:min(820px,100%);margin:auto;padding:25px 16px 60px}
-.hero{
+
+.wrap {
+  width:min(820px,100%);
+  margin:auto;
+  padding:25px 16px 60px;
+}
+
+.hero {
   text-align:center;
   min-height:65vh;
   display:flex;
@@ -35,33 +44,64 @@ body{
   align-items:center;
   padding:30px 12px;
 }
-.eyebrow{
+
+.eyebrow {
   color:var(--silver);
   font-size:.72rem;
   letter-spacing:.28em;
   text-transform:uppercase;
 }
-h1{
+
+h1 {
   font-family:Georgia,serif;
   font-weight:400;
   font-size:clamp(3rem,10vw,5.7rem);
   letter-spacing:.04em;
   margin:16px 0 5px;
 }
-.sub{color:var(--silver);letter-spacing:.35em;font-size:.85rem}
-.intro{max-width:560px;line-height:1.7;color:#e9e1e6;margin:22px auto 30px}
-.panel{
+
+.sub {
+  color:var(--silver);
+  letter-spacing:.35em;
+  font-size:.85rem;
+}
+
+.intro {
+  max-width:560px;
+  line-height:1.7;
+  color:#e9e1e6;
+  margin:22px auto 30px;
+}
+
+.panel {
   margin:18px 0;
   padding:25px;
   border:1px solid var(--line);
   border-radius:22px;
-  background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.09),
+    rgba(255,255,255,.025)
+  );
   backdrop-filter:blur(18px);
   box-shadow:inset 0 1px rgba(255,255,255,.12);
 }
-h2{font:400 1.5rem Georgia,serif;margin:8px 0 12px}
-label{display:block;margin:16px 0 7px;font-size:.94rem}
-input[type=text],input[type=email],input[type=tel],textarea{
+
+h2 {
+  font:400 1.5rem Georgia,serif;
+  margin:8px 0 12px;
+}
+
+label {
+  display:block;
+  margin:16px 0 7px;
+  font-size:.94rem;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
   width:100%;
   padding:13px 14px;
   border:1px solid var(--line);
@@ -71,14 +111,44 @@ input[type=text],input[type=email],input[type=tel],textarea{
   font:16px Arial;
   outline:none;
 }
-input:focus,textarea:focus{border-color:var(--silver)}
-input::placeholder,textarea::placeholder{color:#c7b9c1}
-textarea{min-height:110px;resize:vertical}
-.hint{color:#d8cbd2;font-size:.86rem;line-height:1.55}
-.options{display:flex;flex-wrap:wrap;gap:9px;margin-top:9px}
-.options label{margin:0;cursor:pointer}
-.options input{position:absolute;opacity:0}
-.options span{
+
+input:focus,textarea:focus {
+  border-color:var(--silver);
+}
+
+input::placeholder,textarea::placeholder {
+  color:#c7b9c1;
+}
+
+textarea {
+  min-height:110px;
+  resize:vertical;
+}
+
+.hint {
+  color:#d8cbd2;
+  font-size:.86rem;
+  line-height:1.55;
+}
+
+.options {
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:9px;
+}
+
+.options label {
+  margin:0;
+  cursor:pointer;
+}
+
+.options input {
+  position:absolute;
+  opacity:0;
+}
+
+.options span {
   display:block;
   padding:10px 14px;
   border:1px solid var(--line);
@@ -86,45 +156,123 @@ textarea{min-height:110px;resize:vertical}
   background:rgba(255,255,255,.045);
   font-size:.9rem;
 }
-.options input:checked+span{background:var(--silver);color:var(--wine)}
-.q{margin:22px 0}
-.q-title{font-size:.96rem;line-height:1.5}
-.stars{display:flex;gap:9px;margin:12px 0}
-.stars button{
-  border:0;background:none;color:#776a72;
-  font-size:42px;cursor:pointer;padding:0;
+
+.options input:checked+span {
+  background:var(--silver);
+  color:var(--wine);
 }
-.stars button.active{color:var(--silver)}
-.consent{display:flex;gap:10px;align-items:flex-start;line-height:1.5}
-.consent input{width:19px;height:19px;margin-top:2px;accent-color:var(--silver)}
-.submit{
-  display:block;width:100%;margin-top:22px;padding:15px;
-  border:1px solid var(--line);border-radius:30px;
+
+.q {
+  margin:22px 0;
+}
+
+.q-title {
+  font-size:.96rem;
+  line-height:1.5;
+}
+
+.stars {
+  display:flex;
+  gap:9px;
+  margin:12px 0;
+}
+
+.stars button {
+  border:0;
+  background:none;
+  color:#776a72;
+  font-size:42px;
+  cursor:pointer;
+  padding:0;
+}
+
+.stars button.active {
+  color:var(--silver);
+}
+
+.consent {
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  line-height:1.5;
+}
+
+.consent input {
+  width:19px;
+  height:19px;
+  margin-top:2px;
+  accent-color:var(--silver);
+}
+
+.submit {
+  display:block;
+  width:100%;
+  margin-top:22px;
+  padding:15px;
+  border:1px solid var(--line);
+  border-radius:30px;
   background:linear-gradient(120deg,#e0e1e4,#aeb1b8);
-  color:#310b1b;font-weight:700;letter-spacing:.12em;
-  text-transform:uppercase;font-size:.9rem;cursor:pointer;
+  color:#310b1b;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-size:.9rem;
+  cursor:pointer;
 }
-.submit:disabled{opacity:.55;cursor:wait}
-.status{text-align:center;min-height:24px;margin-top:14px;line-height:1.5}
-.success{display:none;text-align:center;padding:65px 15px}
-.success h2{font-size:2.5rem}
-footer{text-align:center;color:var(--silver);letter-spacing:.18em;font-size:.72rem;margin-top:35px}
-@media(max-width:560px){.panel{padding:20px 16px}.hero{min-height:60vh}}
+
+.submit:disabled {
+  opacity:.55;
+  cursor:wait;
+}
+
+.status {
+  text-align:center;
+  min-height:24px;
+  margin-top:14px;
+  line-height:1.5;
+}
+
+.success {
+  display:none;
+  text-align:center;
+  padding:65px 15px;
+}
+
+.success h2 {
+  font-size:2.5rem;
+}
+
+footer {
+  text-align:center;
+  color:var(--silver);
+  letter-spacing:.18em;
+  font-size:.72rem;
+  margin-top:35px;
+}
+
+@media(max-width:560px) {
+  .panel { padding:20px 16px; }
+  .hero { min-height:60vh; }
+}
 </style>
 </head>
 
 <body>
 <main class="wrap">
 
-<header class="hero">
+<header class="hero" id="hero">
   <div class="eyebrow">Official Event Feedback Portal</div>
   <h1>DESTINY '26</h1>
   <div class="sub">FIFTH ANNIVERSARY</div>
+
   <p class="intro">
     An unforgettable celebration deserves your voice.
     Share your experience and help us make future celebrations even better.
   </p>
-  <button class="submit" style="max-width:280px" type="button"
+
+  <button class="submit"
+    style="max-width:280px"
+    type="button"
     onclick="document.getElementById('personal').scrollIntoView({behavior:'smooth'})">
     SHARE YOUR EXPERIENCE
   </button>
@@ -137,15 +285,18 @@ footer{text-align:center;color:var(--silver);letter-spacing:.18em;font-size:.72r
   <h2>Let's get to know you</h2>
 
   <label for="full_name">Full name *</label>
-  <input id="full_name" type="text" maxlength="120" required
+  <input id="full_name" type="text"
+    maxlength="120" required
     placeholder="Your full name">
 
   <label for="email">Email address *</label>
-  <input id="email" type="email" maxlength="160" required
+  <input id="email" type="email"
+    maxlength="160" required
     placeholder="name@example.com">
 
   <label for="contact_number">Contact number (optional)</label>
-  <input id="contact_number" type="tel" maxlength="30"
+  <input id="contact_number" type="tel"
+    maxlength="30"
     placeholder="+94 ...">
 
   <label>Your relationship to the event</label>
@@ -155,14 +306,19 @@ footer{text-align:center;color:var(--silver);letter-spacing:.18em;font-size:.72r
 <section class="panel">
   <div class="eyebrow">STEP 02</div>
   <h2>Your DESTINY '26 experience</h2>
-  <p class="hint">Choose the answer that best describes your experience.</p>
+  <p class="hint">
+    Choose the answer that best describes your experience.
+  </p>
   <div id="questions"></div>
 </section>
 
 <section class="panel">
   <div class="eyebrow">STEP 03</div>
   <h2>Your overall rating</h2>
-  <p class="hint">How many stars would you give DESTINY '26?</p>
+  <p class="hint">
+    How many stars would you give DESTINY '26?
+  </p>
+
   <div class="stars" id="stars">
     <button type="button" data-star="1" aria-label="1 star">★</button>
     <button type="button" data-star="2" aria-label="2 stars">★</button>
@@ -170,32 +326,44 @@ footer{text-align:center;color:var(--silver);letter-spacing:.18em;font-size:.72r
     <button type="button" data-star="4" aria-label="4 stars">★</button>
     <button type="button" data-star="5" aria-label="5 stars">★</button>
   </div>
+
   <div class="hint" id="starLabel">Select a rating</div>
 </section>
 
 <section class="panel">
   <div class="eyebrow">STEP 04</div>
   <h2>Your message</h2>
-  <label for="comments">Additional comments or suggestions (optional)</label>
+
+  <label for="comments">
+    Additional comments or suggestions (optional)
+  </label>
+
   <textarea id="comments" maxlength="2000"
     placeholder="Share your thoughts with us..."></textarea>
 
   <label class="consent">
     <input type="checkbox" id="consent" required>
-    <span>I understand that my feedback will be stored and reviewed by the event organisers. *</span>
+    <span>
+      I understand that my feedback will be stored and reviewed
+      by the event organisers. *
+    </span>
   </label>
 
   <button class="submit" id="submitBtn" type="submit">
     SUBMIT MY FEEDBACK
   </button>
-  <div class="status" id="status" role="status" aria-live="polite"></div>
+
+  <div class="status" id="status"
+    role="status" aria-live="polite"></div>
 </section>
+
 </form>
 
 <section class="success panel" id="success">
   <div class="eyebrow">THANK YOU</div>
   <h2>THANK YOU!</h2>
   <div class="sub">YOUR VOICE MATTERS</div>
+
   <p class="intro">
     Thank you for sharing your experience.
     Your contribution helped make DESTINY '26 memorable.
@@ -203,13 +371,20 @@ footer{text-align:center;color:var(--silver);letter-spacing:.18em;font-size:.72r
 </section>
 
 <footer>DESTINY '26 · FIFTH ANNIVERSARY</footer>
+
 </main>
 
 <script>
 /* Supabase public publishable key */
-const SUPABASE_URL = "https://hirmdclvribhjtheecen.supabase.co";
-const SUPABASE_KEY = "sb_publishable_a9JMjwsJ72P99L3G4iexBw_Mg88g5R0";
+const SUPABASE_URL =
+  "https://hirmdclvribhjtheecen.supabase.co";
+
+const SUPABASE_KEY =
+  "sb_publishable_a9JMjwsJ72P99L3G4iexBw_Mg88g5R0";
+
 const TABLE = "feedback";
+
+/* FIVE REMAINING QUESTIONS */
 
 const questions = [
   {
@@ -223,33 +398,8 @@ const questions = [
     choices:["Excellent","Very Good","Good","Average","Poor"]
   },
   {
-    id:"atmosphere",
-    title:"How was the atmosphere of DESTINY '26?",
-    choices:["Amazing","Very Good","Good","Average","Poor"]
-  },
-  {
-    id:"stage",
-    title:"How would you rate the stage and decorations?",
-    choices:["Excellent","Very Good","Good","Average","Poor"]
-  },
-  {
-    id:"sound",
-    title:"How was the sound quality?",
-    choices:["Excellent","Very Good","Good","Average","Poor"]
-  },
-  {
-    id:"lighting",
-    title:"How were the lighting and visuals?",
-    choices:["Excellent","Very Good","Good","Average","Poor"]
-  },
-  {
     id:"entertainment",
     title:"How was the entertainment?",
-    choices:["Excellent","Very Good","Good","Average","Poor"]
-  },
-  {
-    id:"programme",
-    title:"How was the programme and its flow?",
     choices:["Excellent","Very Good","Good","Average","Poor"]
   },
   {
@@ -275,10 +425,13 @@ const relationships = [
 
 let overallStars = 0;
 
-function makeOptions(container, name, values) {
+function makeOptions(container,name,values) {
   container.innerHTML = values.map((value,index) => `
     <label>
-      <input type="radio" name="${name}" value="${value}" ${index===0 && name==="relationship" ? "checked" : ""}>
+      <input type="radio"
+        name="${name}"
+        value="${value}"
+        ${index===0 && name==="relationship" ? "checked" : ""}>
       <span>${value}</span>
     </label>
   `).join("");
@@ -290,21 +443,30 @@ makeOptions(
   relationships
 );
 
-const questionContainer = document.getElementById("questions");
+/* Display remaining questions */
+
+const questionContainer =
+  document.getElementById("questions");
 
 questions.forEach((q,index) => {
   const div = document.createElement("div");
   div.className = "q";
+
   const title = document.createElement("div");
   title.className = "q-title";
   title.textContent = (index+1)+". "+q.title;
+
   div.appendChild(title);
 
   const options = document.createElement("div");
   options.className = "options";
+
   options.innerHTML = q.choices.map((choice,i) => `
     <label>
-      <input type="radio" name="${q.id}" value="${choice}" ${i===0 ? "checked" : ""}>
+      <input type="radio"
+        name="${q.id}"
+        value="${choice}"
+        ${i===0 ? "checked" : ""}>
       <span>${choice}</span>
     </label>
   `).join("");
@@ -313,38 +475,53 @@ questions.forEach((q,index) => {
   questionContainer.appendChild(div);
 });
 
+/* Star rating */
+
 document.querySelectorAll("[data-star]").forEach(button => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click",() => {
     overallStars = Number(button.dataset.star);
+
     document.querySelectorAll("[data-star]").forEach(star => {
-      star.classList.toggle("active",Number(star.dataset.star)<=overallStars);
+      star.classList.toggle(
+        "active",
+        Number(star.dataset.star)<=overallStars
+      );
     });
+
     document.getElementById("starLabel").textContent =
       overallStars+" out of 5 stars";
   });
 });
 
-document.getElementById("feedbackForm").addEventListener("submit", async event => {
+/* Submit feedback to Supabase */
+
+document.getElementById("feedbackForm")
+.addEventListener("submit",async event => {
+
   event.preventDefault();
 
   const status = document.getElementById("status");
   const submitBtn = document.getElementById("submitBtn");
 
   if (!overallStars) {
-    status.textContent = "Please select your overall star rating.";
+    status.textContent =
+      "Please select your overall star rating.";
     return;
   }
 
   if (!document.getElementById("consent").checked) {
-    status.textContent = "Please confirm the consent checkbox.";
+    status.textContent =
+      "Please confirm the consent checkbox.";
     return;
   }
 
   const answers = {};
+
   questions.forEach(q => {
     const selected = document.querySelector(
       'input[name="'+q.id+'"]:checked'
     );
+
     answers[q.id] = selected ? selected.value : "";
   });
 
@@ -353,24 +530,36 @@ document.getElementById("feedbackForm").addEventListener("submit", async event =
   );
 
   const payload = {
-    full_name: document.getElementById("full_name").value.trim(),
-    email: document.getElementById("email").value.trim(),
-    contact_number: document.getElementById("contact_number").value.trim(),
-    relationship: relationshipChoice ? relationshipChoice.value : "Other",
-    overall_stars: overallStars,
-    answers: answers,
-    comments: document.getElementById("comments").value.trim(),
-    consent_to_store: true,
-    submitted_at: new Date().toISOString()
+    full_name:
+      document.getElementById("full_name").value.trim(),
+
+    email:
+      document.getElementById("email").value.trim(),
+
+    contact_number:
+      document.getElementById("contact_number").value.trim(),
+
+    relationship:
+      relationshipChoice ? relationshipChoice.value : "Other",
+
+    overall_stars:overallStars,
+    answers:answers,
+
+    comments:
+      document.getElementById("comments").value.trim(),
+
+    consent_to_store:true,
+    submitted_at:new Date().toISOString()
   };
 
   submitBtn.disabled = true;
   submitBtn.textContent = "SUBMITTING...";
-  status.textContent = "Sending your feedback securely...";
+  status.textContent =
+    "Sending your feedback securely...";
 
   try {
     const response = await fetch(
-      SUPABASE_URL + "/rest/v1/" + TABLE,
+      SUPABASE_URL+"/rest/v1/"+TABLE,
       {
         method:"POST",
         headers:{
@@ -388,20 +577,30 @@ document.getElementById("feedbackForm").addEventListener("submit", async event =
       throw new Error(errorText || "Submission failed");
     }
 
-    document.getElementById("feedbackForm").style.display = "none";
-    document.getElementById("hero").style.display = "none";
-    document.getElementById("success").style.display = "block";
+    document.getElementById("feedbackForm").style.display =
+      "none";
+
+    document.getElementById("hero").style.display =
+      "none";
+
+    document.getElementById("success").style.display =
+      "block";
+
     window.scrollTo({top:0,behavior:"smooth"});
 
-  } catch (error) {
+  } catch(error) {
     console.error("Feedback submission error:",error);
+
     status.textContent =
       "Sorry, your feedback could not be submitted. Please try again. ("+
       error.message.substring(0,180)+")";
+
     submitBtn.disabled = false;
     submitBtn.textContent = "SUBMIT MY FEEDBACK";
   }
+
 });
 </script>
+
 </body>
 </html>
