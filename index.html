@@ -32,7 +32,7 @@ body {
 .wrap {
   width:min(820px,100%);
   margin:auto;
-  padding:25px 16px 60px;
+  padding:25px 16px 40px;
 }
 
 .hero {
@@ -242,12 +242,45 @@ textarea {
   font-size:2.5rem;
 }
 
+/* PROFESSIONAL DEVELOPER FOOTER */
+
 footer {
   text-align:center;
   color:var(--silver);
-  letter-spacing:.18em;
-  font-size:.72rem;
-  margin-top:35px;
+  margin-top:45px;
+  padding:24px 12px;
+  border-top:1px solid var(--line);
+  font-size:.85rem;
+  line-height:1.8;
+}
+
+footer .credit {
+  color:#e8e6e9;
+  letter-spacing:.08em;
+}
+
+footer a {
+  display:inline-block;
+  color:var(--silver);
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:.08em;
+  border-bottom:1px solid rgba(197,199,204,.5);
+  transition:.25s ease;
+}
+
+footer a:hover {
+  color:white;
+  border-color:white;
+  text-shadow:0 0 12px rgba(255,255,255,.35);
+}
+
+footer .footer-small {
+  display:block;
+  margin-top:9px;
+  font-size:.68rem;
+  letter-spacing:.2em;
+  opacity:.65;
 }
 
 @media(max-width:560px) {
@@ -370,12 +403,29 @@ footer {
   </p>
 </section>
 
-<footer>DESTINY '26 · FIFTH ANNIVERSARY</footer>
+<!-- MODLAB_WEBSITES DEVELOPER CREDIT -->
+
+<footer>
+  <div class="credit">Developed by</div>
+
+  <a
+    href="https://www.instagram.com/modlab_websites/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Visit Modlab Websites on Instagram">
+    @modlab_websites
+  </a>
+
+  <span class="footer-small">
+    MODLAB_WEBSITES · WEB DESIGN & DEVELOPMENT
+  </span>
+</footer>
 
 </main>
 
 <script>
-/* Supabase public publishable key */
+/* SUPABASE CONNECTION */
+
 const SUPABASE_URL =
   "https://hirmdclvribhjtheecen.supabase.co";
 
@@ -384,7 +434,7 @@ const SUPABASE_KEY =
 
 const TABLE = "feedback";
 
-/* FIVE REMAINING QUESTIONS */
+/* FIVE QUESTIONS */
 
 const questions = [
   {
@@ -443,7 +493,7 @@ makeOptions(
   relationships
 );
 
-/* Display remaining questions */
+/* DISPLAY QUESTIONS */
 
 const questionContainer =
   document.getElementById("questions");
@@ -475,7 +525,7 @@ questions.forEach((q,index) => {
   questionContainer.appendChild(div);
 });
 
-/* Star rating */
+/* STAR RATING */
 
 document.querySelectorAll("[data-star]").forEach(button => {
   button.addEventListener("click",() => {
@@ -493,7 +543,7 @@ document.querySelectorAll("[data-star]").forEach(button => {
   });
 });
 
-/* Submit feedback to Supabase */
+/* SUBMIT FEEDBACK */
 
 document.getElementById("feedbackForm")
 .addEventListener("submit",async event => {
